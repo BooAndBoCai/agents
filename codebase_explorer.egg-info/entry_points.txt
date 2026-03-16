@@ -1,2 +1,0 @@
-[console_scripts]
-explore = codebase_explorer.cli:main
