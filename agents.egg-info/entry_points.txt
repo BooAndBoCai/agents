@@ -1,2 +1,0 @@
-[console_scripts]
-codebase-analyze = agents.cli:main

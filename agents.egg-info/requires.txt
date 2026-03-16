@@ -1,8 +1,0 @@
-
-[dev]
-pytest>=7.0
-pytest-cov
-ruff
-
-[openai]
-openai>=1.0
