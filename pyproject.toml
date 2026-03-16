@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codebase-explorer"
+version = "0.1.0"
+description = "Quick codebase analysis – ask questions about your code without adding to your main context"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = [
+    "openai>=1.0.0",
+    "tiktoken>=0.5.0",
+    "rich>=13.0.0",
+    "click>=8.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21",
+    "pytest-mock>=3.10",
+]
+
+[project.scripts]
+explore = "codebase_explorer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["codebase_explorer*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
